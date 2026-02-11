@@ -1,0 +1,1 @@
+{"name":"한일 버스 대구","short_name":"한일버스","description":"대구 한일 버스 실시간 운행 정보 및 시간표","start_url":"/hanil-bus-daegu/","display":"standalone","background_color":"#ffffff","theme_color":"#007aff","lang":"en","scope":"/hanil-bus-daegu/","icons":[{"src":"icon.svg","sizes":"192x192 512x512","type":"image/svg+xml","purpose":"any maskable"}]}
