@@ -261,7 +261,7 @@ Error generating stack: `+f.message+`
                     bottom: 50px; /* Positioned directly above the 50px ad */
                     left: 0;
                     width: 100%;
-                    height: 80px;
+                    height: 60px;
                     background: rgba(255, 255, 255, 0.95);
                     backdrop-filter: blur(10px);
                     display: flex;
@@ -269,7 +269,7 @@ Error generating stack: `+f.message+`
                     align-items: center;
                     border-top: 1px solid rgba(0,0,0,0.1);
                     z-index: 1000; /* Higher than GoogleAd */
-                    padding-bottom: 10px;
+                    padding-bottom: 0;
                 }
                 .nav-item {
                     border: none;
@@ -280,7 +280,7 @@ Error generating stack: `+f.message+`
                     gap: 6px; /* Increased gap */
                     color: #8e8e93;
                     cursor: pointer;
-                    padding: 8px;
+                    padding: 4px;
                     transition: all 0.2s ease;
                 }
                 .nav-item.active {
@@ -288,10 +288,10 @@ Error generating stack: `+f.message+`
                     transform: translateY(-2px);
                 }
                 .nav-icon {
-                    font-size: 1.6rem; /* Larger icons */
+                    font-size: 1.4rem; /* Smaller icons */
                 }
                 .nav-label {
-                    font-size: 0.8rem; /* Larger text */
+                    font-size: 0.75rem; /* Smaller text */
                     font-weight: 600;
                 }
             `})]})},zT=()=>(Pe.useEffect(()=>{try{(window.adsbygoogle=window.adsbygoogle||[]).push({})}catch(t){console.error("[GoogleAd] Error initializing adsbygoogle:",t)}},[]),O.jsxs("div",{className:"ad-container fixed-bottom-banner",style:{width:"100%",height:"50px",textAlign:"center",background:"#f8f9fa",zIndex:990,position:"fixed",bottom:0,left:0,overflow:"hidden",display:"flex",flexDirection:"column",justifyContent:"center",borderTop:"1px solid #e2e8f0"},children:[O.jsx("ins",{className:"adsbygoogle",style:{display:"inline-block",width:"100%",height:"40px"},"data-ad-client":"ca-pub-8780669609800607","data-ad-slot":"4685750113"}),O.jsx("span",{style:{fontSize:"9px",color:"#999",display:"block",lineHeight:"10px"},children:"ADVERTISEMENT"})]}));function IT(){const[t,r]=Pe.useState("timetable"),n=Pe.useRef(null),l=Pe.useRef(null);return Pe.useEffect(()=>{const s=n.current;if(!s)return;const u=d=>{l.current={x:d.touches[0].clientX,y:d.touches[0].clientY,time:Date.now()}},c=d=>{if(!l.current)return;const x={x:d.changedTouches[0].clientX,y:d.changedTouches[0].clientY,time:Date.now()},m=l.current.x-x.x,v=l.current.y-x.y;if(x.time-l.current.time<300&&Math.abs(m)>50&&Math.abs(m)>Math.abs(v)*1.5){const T=["timetable","calendar","realtime","about"],_=T.indexOf(t);m>0&&_<T.length-1?r(T[_+1]):m<0&&_>0&&r(T[_-1])}l.current=null};return s.addEventListener("touchstart",u,{passive:!0}),s.addEventListener("touchend",c,{passive:!0}),()=>{s.removeEventListener("touchstart",u),s.removeEventListener("touchend",c)}},[t]),console.log("[App] Current Active Tab:",t),O.jsxs("div",{className:"App",children:[O.jsx("div",{className:"content-container",ref:n,children:O.jsxs("div",{className:`tabs-slider ${t}`,children:[O.jsx("div",{className:"tab-pane",children:O.jsx(uv,{})}),O.jsx("div",{className:"tab-pane",children:O.jsx(kT,{})}),O.jsx("div",{className:"tab-pane",children:O.jsx(V8,{})}),O.jsx("div",{className:"tab-pane",children:O.jsx(Y8,{})})]})}),O.jsx(jT,{activeTab:t,onTabChange:r}),O.jsx(zT,{})]})}console.log("[DEBUG] React app mounting...");w6.createRoot(document.getElementById("root")).render(O.jsx(n5.StrictMode,{children:O.jsx(IT,{})}));console.log("[DEBUG] React app mounted.");
