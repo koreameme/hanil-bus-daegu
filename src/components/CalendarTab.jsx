@@ -49,13 +49,14 @@ const CalendarTab = () => {
 
         const dataToExport = schedules.map(s => ({
             '날짜': s.date,
-            '노선': `${s.route}번`,
-            '근무': s.shift === 'morning' ? '오전반' : '오후반',
-            '순번': s.sequence,
+            '노선': s.shift === 'off' ? '휴무' : `${s.route}번`,
+            '근무': s.shift === 'morning' ? '오전반' : (s.shift === 'afternoon' ? '오후반' : '휴무'),
+            '순번': s.sequence || '',
             '차량번호': s.vehicleNumber ? `19${s.vehicleNumber.replace('19', '')}` : '',
             '교대자': s.reliefDriver || '',
-            '시작 시간': s.startTime,
-            '종료 시간': s.endTime
+            '시작 시간': s.startTime || '',
+            '종료 시간': s.endTime || '',
+            '메모': s.memo || ''
         }));
 
         // Sort by date
